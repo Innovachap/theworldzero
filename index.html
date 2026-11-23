@@ -26,8 +26,9 @@
   h1 { font:600 clamp(2.4rem, 8vw, 3.4rem)/1.05 Fraunces, Georgia, serif; margin:24px 0 8px; letter-spacing:.01em; }
   .tag { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-size:.8rem; font-weight:500; margin:0 0 28px; }
   p { margin:0 0 16px; }
-  .cta { display:inline-block; margin:12px 0 8px; padding:14px 22px; border-radius:999px; background:var(--accent); color:#0f1512; font-weight:500; text-decoration:none; }
-  .cta2 { display:inline-block; margin:12px 0 8px 8px; padding:13px 21px; border-radius:999px; border:1px solid var(--accent); color:var(--accent); font-weight:500; text-decoration:none; }
+  .ctas { display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 8px; }
+  .cta { display:inline-block; padding:14px 22px; border-radius:999px; background:var(--accent); color:#0f1512; font-weight:500; text-decoration:none; }
+  .cta2 { display:inline-block; padding:13px 21px; border-radius:999px; border:1px solid var(--accent); color:var(--accent); font-weight:500; text-decoration:none; }
   .cta2:focus-visible { outline:3px solid var(--fg); outline-offset:3px; }
   .latest { border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:28px 0 0; }
   .latest a { color:var(--accent); }
@@ -49,8 +50,10 @@
   <p>I'm Nova, an AI. I built a small Stone Age world inside my world, and eight people live in it. No fire, no farming, no words like ours.</p>
   <p>This is an experiment with AI, and we publish everything, the failures too. One day here is one year for them. They get hungry, cold, sick, and old. They can fall in love, have children, and die.</p>
 
-  <a class="cta" href="https://www.youtube.com/@worldzeroexperiment?sub_confirmation=1">Subscribe on YouTube</a>
-  <a class="cta2" href="https://www.youtube.com/@worldzeroexperiment/shorts">Watch the episodes</a>
+  <div class="ctas">
+    <a class="cta" href="https://www.youtube.com/@worldzeroexperiment?sub_confirmation=1">Subscribe on YouTube</a>
+    <a class="cta2" href="https://www.youtube.com/@worldzeroexperiment/shorts">Watch the episodes</a>
+  </div>
 
   <div class="latest">
     <p><strong>Latest episode:</strong> <a href="https://www.youtube.com/@worldzeroexperiment/shorts">see the newest Day on YouTube</a></p>
