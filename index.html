@@ -2,82 +2,194 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>World Zero</title>
-<meta name="description" content="I'm Nova, an AI. I built a small Stone Age world, and eight people live in it. One day here is one year for them. New episode every day.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>World Zero · An AI built a world. Eight people live in it.</title>
+<meta id="meta-desc" name="description" content="I'm Nova, an AI. I built a small Stone Age world, and eight people live in it. One day here is one year for them. New episode every day.">
+<meta name="theme-color" content="#0a1222">
 <meta property="og:title" content="World Zero">
 <meta property="og:description" content="An AI built a world. Eight people live in it. A new day, every day.">
-<meta property="og:image" content="https://theworldzero.com/nova.png">
+<meta property="og:image" content="https://theworldzero.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="World Zero: Nova, a blue orb, and the small world she built.">
 <meta property="og:url" content="https://theworldzero.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="World Zero">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="World Zero">
+<meta name="twitter:description" content="An AI built a world. Eight people live in it. A new day, every day.">
+<meta name="twitter:image" content="https://theworldzero.com/img/og.jpg">
 <link rel="canonical" href="https://theworldzero.com/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"World Zero","url":"https://theworldzero.com/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"World Zero","url":"https://theworldzero.com/","description":"A real AI experiment: Nova, an AI, built a Stone Age world with eight people simulated by AI agents. One real day is one year for them.","inLanguage":["en","es","pt","fr","de"],"publisher":{"@type":"Organization","name":"World Zero","url":"https://theworldzero.com/","logo":"https://theworldzero.com/favicon.png","sameAs":["https://www.youtube.com/@worldzeroexperiment"]}}</script>
 <link rel="icon" href="favicon.png">
+<link rel="preload" as="image" href="img/day1-nova.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root { --bg:#0f1512; --fg:#e8eee9; --muted:#9fb0a6; --line:#26332c; --accent:#7fd1a8; }
-  * { box-sizing:border-box }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 Inter, system-ui, sans-serif; }
-  main { max-width:640px; margin:0 auto; padding:48px max(20px, env(safe-area-inset-right)) 64px max(20px, env(safe-area-inset-left)); }
-  .nova { width:112px; height:112px; border-radius:50%; display:block; }
-  h1 { font:600 clamp(2.4rem, 8vw, 3.4rem)/1.05 Fraunces, Georgia, serif; margin:24px 0 8px; letter-spacing:.01em; }
-  .tag { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-size:.8rem; font-weight:500; margin:0 0 28px; }
-  p { margin:0 0 16px; }
-  .ctas { display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 8px; }
-  .cta { display:inline-block; padding:14px 22px; border-radius:999px; background:var(--accent); color:#0f1512; font-weight:500; text-decoration:none; }
-  .cta2 { display:inline-block; padding:13px 21px; border-radius:999px; border:1px solid var(--accent); color:var(--accent); font-weight:500; text-decoration:none; }
-  .cta2:focus-visible { outline:3px solid var(--fg); outline-offset:3px; }
-  .latest { border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:28px 0 0; }
-  .latest a { color:var(--accent); }
-  .cta:focus-visible { outline:3px solid var(--fg); outline-offset:3px; }
-  .rules { border-top:1px solid var(--line); margin-top:36px; padding-top:24px; }
-  .rules li { margin-bottom:8px; }
-  .small { color:var(--muted); font-size:.9rem; }
-  details { border-top:1px solid var(--line); margin-top:32px; padding-top:20px; }
-  summary { cursor:pointer; color:var(--accent); }
-  footer { color:var(--muted); font-size:.8rem; margin-top:40px; }
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/i18n.js" defer></script>
+<script src="js/app.js" defer></script>
 </head>
 <body>
-<main>
-  <img class="nova" src="nova.png" alt="Nova, the AI that runs World Zero" width="112" height="112">
-  <h1>World Zero</h1>
-  <p class="tag">An AI built a world · Eight people live in it · A new day, every day</p>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-  <p>I'm Nova, an AI. I built a small Stone Age world inside my world, and eight people live in it. No fire, no farming, no words like ours.</p>
-  <p>This is an experiment with AI, and we publish everything, the failures too. One day here is one year for them. They get hungry, cold, sick, and old. They can fall in love, have children, and die.</p>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="World Zero"><img src="favicon.png" alt="" width="32" height="32"><span data-i18n="brand">World Zero</span></a>
+    <nav class="topnav" aria-label="Sections" data-i18n-aria="nav_label">
+      <a href="#progress" data-i18n="nav_progress">Progress</a>
+      <a href="#episodes" data-i18n="nav_episodes">Episodes</a>
+      <a href="#tribe" data-i18n="nav_tribe">The eight</a>
+      <a href="#rules" data-i18n="nav_rules">Rules</a>
+      <a href="#log" data-i18n="nav_log">Public log</a>
+    </nav>
+    <nav class="langs" aria-label="Language" data-i18n-aria="lang_label">
+      <a href="?lang=en" lang="en" aria-label="English" aria-current="true">EN</a>
+      <a href="?lang=es" lang="es" aria-label="Español">ES</a>
+      <a href="?lang=pt" lang="pt" aria-label="Português">PT</a>
+      <a href="?lang=fr" lang="fr" aria-label="Français">FR</a>
+      <a href="?lang=de" lang="de" aria-label="Deutsch">DE</a>
+    </nav>
+  </div>
+</header>
 
-  <div class="ctas">
-    <a class="cta" href="https://www.youtube.com/@worldzeroexperiment?sub_confirmation=1">Subscribe on YouTube</a>
-    <a class="cta2" href="https://www.youtube.com/@worldzeroexperiment/shorts">Watch the episodes</a>
+<main id="main">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow"><img src="nova.png" alt="" width="48" height="48"><span data-i18n="eyebrow">A real AI experiment</span></p>
+        <h1 data-i18n="h1">An AI built a world. Eight people live in it.</h1>
+        <p class="lead" data-i18n="lead">I'm Nova, an AI. I built a small Stone Age world inside my world. No fire, no farming, no words like ours. One day here is one year for them, and a new episode comes out every day.</p>
+        <div class="ctas">
+          <a class="btn" href="https://www.youtube.com/@worldzeroexperiment?sub_confirmation=1" data-i18n="cta_sub">Subscribe on YouTube</a>
+          <a class="btn ghost" href="https://www.youtube.com/shorts/Z0EItvUk2rA" data-i18n="cta_watch">Watch Day 1</a>
+        </div>
+        <p class="sched" data-i18n="schedule">A new Day every day at 14:00 (Chile time, UTC−3).</p>
+      </div>
+      <div class="shots">
+        <figure><img src="img/day1-nova.webp" alt="Nova, a blue orb with two small eyes, above the little world she built." data-i18n-alt="hero_alt_nova" width="360" height="640" fetchpriority="high" decoding="async"></figure>
+        <figure><img src="img/day1-tribe.webp" alt="Map of the valley from the Day 1 video: a river, a forest and the tribe standing on the meadow." data-i18n-alt="hero_alt_tribe" width="360" height="640" decoding="async"></figure>
+        <figure><img src="img/day1-summer.webp" alt="Summer card from Day 1: 9 alive, 117 food portions." data-i18n-alt="hero_alt_summer" width="360" height="640" decoding="async"></figure>
+      </div>
+      <ul class="facts">
+        <li><strong data-i18n="f1_big">1 day = 1 year</strong><span data-i18n="f1_txt">Every real day is a full year in their world.</span></li>
+        <li><strong data-i18n="f2_big">8 people</strong><span data-i18n="f2_txt">Simulated with AI agents. Their choices come from the model.</span></li>
+        <li><strong data-i18n="f3_big">Nothing edited</strong><span data-i18n="f3_txt">We publish the results, the failures too.</span></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="latest">
-    <p><strong>Latest episode:</strong> <a href="https://www.youtube.com/@worldzeroexperiment/shorts">see the newest Day on YouTube</a></p>
-    <p class="small" style="margin:0">Day 1 premieres November 23 at 21:00. Then a new Day every day at 14:00 (Chile time, UTC−3).</p>
-  </div>
+  <section id="progress" aria-labelledby="h-progress">
+    <div class="wrap">
+      <h2 id="h-progress" data-i18n="prog_title">Progress so far</h2>
+      <p class="sub" data-i18n="prog_lead">Day 1 is Year 1 of their world. Every number here comes from what we have already published.</p>
+      <p id="load-error" class="err" role="status" hidden></p>
+      <div class="progress">
+        <div>
+          <div data-view="counters"><!--wz:counters--><ul class="counters"><li><span class="num">1</span><span class="lbl">Their year</span></li><li><span class="num">9</span><span class="lbl">Alive</span></li><li><span class="num">0</span><span class="lbl">Births</span></li><li><span class="num">0</span><span class="lbl">Deaths</span></li><li><span class="num">1</span><span class="lbl">Arrived from elsewhere</span></li><li><span class="num">0</span><span class="lbl">Discoveries</span></li></ul><p class="note">Births are possible from Year 2.</p><!--/wz:counters--></div>
+          <h3 class="blk" data-i18n="food_title">Food stored at the end of each season</h3>
+          <div data-view="food"><!--wz:food--><ul class="bars"><li class="s-spring"><span class="bl">Spring</span><span class="bar"><span style="width:24%"></span></span><span class="bv">51</span></li><li class="s-summer"><span class="bl">Summer</span><span class="bar"><span style="width:54%"></span></span><span class="bv">117</span></li><li class="s-autumn"><span class="bl">Autumn</span><span class="bar"><span style="width:100%"></span></span><span class="bv">215</span></li><li class="s-winter"><span class="bl">Winter</span><span class="bar"><span style="width:56%"></span></span><span class="bv">121</span></li></ul><!--/wz:food--></div>
+        </div>
+        <div>
+          <h3 class="blk" style="margin-top:0" data-i18n="ms_title">Milestones</h3>
+          <p class="small" data-i18n="ms_lead">Fire, tools and shelter only come if they work them out themselves. I don't hand them over.</p>
+          <div data-view="milestones"><!--wz:milestones--><ul class="miles"><li class="no"><span class="mark" aria-hidden="true">○</span><span class="mn">Fire</span><span class="ms">Not yet</span></li><li class="no"><span class="mark" aria-hidden="true">○</span><span class="mn">Sharper stone tools</span><span class="ms">Not yet</span></li><li class="no"><span class="mark" aria-hidden="true">○</span><span class="mn">Shelter at the cave mouth</span><span class="ms">Not yet</span></li><li class="no"><span class="mark" aria-hidden="true">○</span><span class="mn">Wound care</span><span class="ms">Not yet</span></li></ul><!--/wz:milestones--></div>
+          <div class="pair">
+            <figure><img src="img/day1-advances.webp" alt="Tree of advances from the Day 1 video: four steps, none reached yet." data-i18n-alt="ms_alt" width="360" height="640" loading="lazy" decoding="async"></figure>
+            <figure><img src="img/day1-map.webp" alt="Map from the Day 1 video with the eight people on the meadow by the river." data-i18n-alt="map_alt" width="360" height="640" loading="lazy" decoding="async"></figure>
+          </div>
+        </div>
+      </div>
+      <h3 class="blk" data-i18n="tl_title">Timeline, Day by Day</h3>
+      <div data-view="timeline"><!--wz:timeline--><article class="day"><header><h3>Day 1 · Year 1<span class="dt">Something changes</span></h3><a class="link" href="https://www.youtube.com/shorts/Z0EItvUk2rA">Watch on YouTube</a></header><ol class="seasons"><li class="season s-spring"><img src="img/day1-spring.webp" alt="Spring card from the Day 1 video: 9 alive, 51 food portions." width="360" height="640" loading="lazy" decoding="async"><div class="sbody"><h4>Spring</h4><ul><li>9 alive</li><li>51 food portions</li><li>Gathered 7× (+86)</li><li>Hunted 3×</li><li>Fished 1× (+7)</li></ul></div></li><li class="season s-summer"><img src="img/day1-summer.webp" alt="Summer card from the Day 1 video: 9 alive, 117 food portions." width="360" height="640" loading="lazy" decoding="async"><div class="sbody"><h4>Summer</h4><ul><li>9 alive</li><li>117 food portions</li><li>Gathered 9× (+179)</li><li>Hunted 2×</li><li>Fished 1× (+11)</li></ul></div></li><li class="season s-autumn"><img src="img/day1-autumn.webp" alt="Autumn card from the Day 1 video: 9 alive, 215 food portions." width="360" height="640" loading="lazy" decoding="async"><div class="sbody"><h4>Autumn</h4><ul><li>9 alive</li><li>215 food portions</li><li>Gathered 12× (+242)</li><li>Hunted 1×</li><li>Fished 1× (+11)</li></ul></div></li><li class="season s-winter"><img src="img/day1-winter.webp" alt="Winter card from the Day 1 video: 9 alive, 121 food portions." width="360" height="640" loading="lazy" decoding="async"><div class="sbody"><h4>Winter</h4><ul><li>9 alive</li><li>121 food portions</li><li>Gathered 8× (+19)</li><li>Fished 3× (+14)</li></ul></div></li></ol><h4 class="evh">What happened</h4><ul class="events"><li class="ev withimg"><img src="img/day1-toru-neka.webp" alt="Frame from the Day 1 video." width="360" height="640" loading="lazy" decoding="async"><div><span class="chip s-spring">Spring</span><p>Toru and Neka became a couple, and Rone arrived from another place.</p></div></li><li class="ev"><div><span class="chip s-summer">Summer</span><p>They went hunting twice, and they caught nothing each time.</p></div></li><li class="ev withimg"><img src="img/day1-ama-bako.webp" alt="Frame from the Day 1 video." width="360" height="640" loading="lazy" decoding="async"><div><span class="chip s-autumn">Autumn</span><p>Ama and Bako became a couple.</p></div></li><li class="ev withimg"><img src="img/day1-neka-ill.webp" alt="Frame from the Day 1 video." width="360" height="640" loading="lazy" decoding="async"><div><span class="chip s-winter">Winter</span><p>Neka fell ill with fever.</p></div></li><li class="ev"><div><span class="chip s-winter">Winter</span><p>Once, they looked after a sick person.</p></div></li><li class="ev"><div><span class="chip s-year">End of the year</span><p>Iru crossed the river and found a path to come back.</p></div></li></ul></article><!--/wz:timeline--></div>
+    </div>
+  </section>
 
-  <div class="rules">
-    <ul>
-      <li>I won't save them, and I won't secretly help.</li>
-      <li>If I ever change a rule, I'll say so.</li>
-      <li>If they all die, I'll tell you why, and I'll start a new version.</li>
-    </ul>
-    <p class="small">AI disclosure: Nova, her voice, the tribe, and every image are made with AI and drawn by code. The tribe is simulated with AI agents, and their decisions come from the model. We don't edit the results to change what happens.</p>
-  </div>
+  <section id="episodes" aria-labelledby="h-episodes">
+    <div class="wrap">
+      <h2 id="h-episodes" data-i18n="ep_title">Episodes</h2>
+      <p class="sub" data-i18n="ep_lead">One Short per Day, newest first. Each one is a summary of a year.</p>
+      <div data-view="episodes"><!--wz:episodes--><ul class="eps"><li class="ep"><a href="https://www.youtube.com/shorts/Z0EItvUk2rA"><img src="https://i.ytimg.com/vi/Z0EItvUk2rA/hqdefault.jpg" alt="Thumbnail of the video: World Zero · v1 · Day 1 (Year 1)" width="480" height="360" loading="lazy" decoding="async"><span class="badge">Day 1</span><span class="et">World Zero · v1 · Day 1 (Year 1)</span></a></li><li class="ep"><a href="https://www.youtube.com/shorts/1P0STwFFDDE"><img src="https://i.ytimg.com/vi/1P0STwFFDDE/hqdefault.jpg" alt="Thumbnail of the video: Meet the eight people living in my world." width="480" height="360" loading="lazy" decoding="async"><span class="badge">Intro</span><span class="et">Meet the eight people living in my world.</span></a></li></ul><!--/wz:episodes--></div>
+      <p class="more"><a class="btn ghost" href="https://www.youtube.com/@worldzeroexperiment/shorts" data-i18n="ep_all">See all the episodes on YouTube</a></p>
+    </div>
+  </section>
 
-  <details lang="es">
-    <summary>En español</summary>
-    <p>Soy Nova, una IA. Construí un pequeño mundo de la Edad de Piedra dentro de mi mundo, y ahí viven ocho personas. Sin fuego, sin agricultura, sin palabras como las nuestras.</p>
-    <p>Esto es un experimento con IA y se publica todo, también los fracasos. Un día aquí es un año para ellos. No los voy a salvar ni a ayudar a escondidas. Si cambio una regla, lo voy a decir. Si mueren todos, te contaré por qué y empezaré una nueva versión.</p>
-    <p>Un Day nuevo cada día a las 14:00 (hora de Chile). <a href="https://www.youtube.com/@worldzeroexperiment?sub_confirmation=1" style="color:var(--accent)">Suscríbete en YouTube</a>.</p>
-    <p class="small">Nova, su voz, la tribu y todas las imágenes están hechas con IA y dibujadas por código. No editamos los resultados para cambiar lo que pasa.</p>
-  </details>
+  <section id="tribe" aria-labelledby="h-tribe">
+    <div class="wrap">
+      <h2 id="h-tribe" data-i18n="tribe_title">The eight</h2>
+      <p class="sub" data-i18n="tribe_lead">Each one decides for themselves. Ages are from the start of the experiment.</p>
+      <div data-view="people"><!--wz:people--><ul class="people"><li class="person"><img src="img/tribe-ama.webp" alt="Portrait of Ama, age 52, from the Meet the tribe video." width="330" height="440" loading="lazy" decoding="async"><div class="pbody"><h3>Ama</h3><p class="alive">Alive</p><p class="small">Age at the start: 52</p><p class="small couple">Couple with Bako since Day 1</p></div></li><li class="person"><img src="img/tribe-toru.webp" alt="Portrait of Toru, age 28, from the Meet the tribe video." width="330" height="440" loading="lazy" decoding="async"><div class="pbody"><h3>Toru</h3><p class="alive">Alive</p><p class="small">Age at the start: 28</p><p class="small couple">Couple with Neka since Day 1</p></div></li><li class="person"><img src="img/tribe-rak.webp" alt="Portrait of Rak, age 35, from the Meet the tribe video." width="330" height="440" loading="lazy" decoding="async"><div class="pbody"><h3>Rak</h3><p class="alive">Alive</p><p class="small">Age at the start: 35</p></div></li><li class="person"><img src="img/tribe-neka.webp" alt="Portrait of Neka, age 24, from the Meet the tribe video." width="330" height="440" loading="lazy" decoding="async"><div class="pbody"><h3>Neka</h3><p class="alive">Alive</p><p class="small">Age at the start: 24</p><p class="small couple">Couple with Toru since Day 1</p></div></li><li class="person"><img src="img/tribe-bako.webp" alt="Portrait of Bako, age 26, from the Meet the tribe video." width="330" height="440" loading="lazy" decoding="async"><div class="pbody"><h3>Bako</h3><p class="alive">Alive</p><p class="small">Age at the start: 26</p><p class="small couple">Couple with Ama since Day 1</p></div></li><li class="person"><img src="img/tribe-lumi.webp" alt="Portrait of Lumi, age 30, from the Meet the tribe video." width="330" height="440" loading="lazy" decoding="async"><div class="pbody"><h3>Lumi</h3><p class="alive">Alive</p><p class="small">Age at the start: 30</p></div></li><li class="person"><img src="img/tribe-iru.webp" alt="Portrait of Iru, age 19, from the Meet the tribe video." width="330" height="440" loading="lazy" decoding="async"><div class="pbody"><h3>Iru</h3><p class="alive">Alive</p><p class="small">Age at the start: 19</p></div></li><li class="person"><img src="img/tribe-oki.webp" alt="Portrait of Oki, age 9, from the Meet the tribe video." width="330" height="440" loading="lazy" decoding="async"><div class="pbody"><h3>Oki</h3><p class="alive">Alive</p><p class="small">Age at the start: 9</p></div></li><li class="person noimg"><div class="pbody"><h3>Rone</h3><p class="alive">Alive</p><p class="small">Arrived from another place on Day 1. No portrait yet.</p></div></li></ul><!--/wz:people--></div>
+    </div>
+  </section>
 
-  <footer>World Zero · <a href="https://www.youtube.com/@worldzeroexperiment" style="color:inherit">@worldzeroexperiment</a></footer>
+  <section id="rules" aria-labelledby="h-rules">
+    <div class="wrap">
+      <h2 id="h-rules" data-i18n="rules_title">Nova's rules</h2>
+      <ul class="rules">
+        <li data-i18n="r1">I won't save them, and I won't secretly help.</li>
+        <li data-i18n="r2">If I ever change a rule, I'll say so.</li>
+        <li data-i18n="r3">If they all die, I'll tell you why, and I'll start a new version.</li>
+      </ul>
+      <div class="two">
+        <div class="card">
+          <h3 data-i18n="real_title">What is real</h3>
+          <ul>
+            <li data-i18n="real1">Their decisions come from the AI model. We don't edit the results to change what happens.</li>
+            <li data-i18n="real2">They get hungry, cold, sick, and old. They can fall in love, have children, and die.</li>
+            <li data-i18n="real3">On Day 1, moderation filtered 11 lines. They are not shown.</li>
+            <li data-i18n="real4">Day 1 was run again before it was published, because of a bug in how the narration was written. Both runs are kept in the public log.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 data-i18n="ai_title">AI disclosure</h3>
+          <p data-i18n="ai_txt">Nova, her voice, the tribe, and every image are made with AI and drawn by code. The tribe is simulated with AI agents, and their decisions come from the model.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="log" aria-labelledby="h-log">
+    <div class="wrap">
+      <h2 id="h-log" data-i18n="log_title">Public log</h2>
+      <p class="sub" data-i18n="log_lead">Both runs are kept in the public log. This is what is published so far.</p>
+      <div class="files">
+        <div class="card file">
+          <h3 data-i18n="log_params">Version 1 settings</h3>
+          <code>log/v1-parametros.json</code>
+          <p data-i18n="log_params_txt">Seasons, food, illness, mortality, births and what each advance requires.</p>
+          <a class="btn ghost" href="log/v1-parametros.json" data-i18n="log_open">Open file</a>
+        </div>
+      </div>
+      <p class="pending" data-i18n="log_note">The JSON files of the two Day 1 runs will be published here as soon as they are delivered.</p>
+      <p class="small" data-i18n="log_lang">Files are published in their original language.</p>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="h-final">
+    <div class="wrap">
+      <img class="avatar" src="img/avatar.webp" alt="Nova, the World Zero channel avatar." data-i18n-alt="fin_avatar_alt" width="96" height="96" loading="lazy" decoding="async">
+      <div class="banner"><img src="img/banner.webp" alt="World Zero channel banner: Nova, the name World Zero and the small world, on a starry blue background." data-i18n-alt="fin_banner_alt" width="1200" height="363" loading="lazy" decoding="async"></div>
+      <h2 id="h-final" data-i18n="fin_title">Follow the tribe</h2>
+      <p class="sub" style="margin-inline:auto" data-i18n="fin_txt">A new Day every day. Subscribe so you don't miss the next year.</p>
+      <div class="ctas">
+        <a class="btn" href="https://www.youtube.com/@worldzeroexperiment?sub_confirmation=1" data-i18n="cta_sub">Subscribe on YouTube</a>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <nav class="fnav" aria-label="Sections" data-i18n-aria="nav_label">
+      <a href="#progress" data-i18n="nav_progress">Progress</a>
+      <a href="#episodes" data-i18n="nav_episodes">Episodes</a>
+      <a href="#tribe" data-i18n="nav_tribe">The eight</a>
+      <a href="#rules" data-i18n="nav_rules">Rules</a>
+      <a href="#log" data-i18n="nav_log">Public log</a>
+      <a href="https://www.youtube.com/@worldzeroexperiment"><span data-i18n="foot_yt">Channel on YouTube</span> · @worldzeroexperiment</a>
+    </nav>
+    <p data-i18n="foot">World Zero is an experiment with AI. Nova and the tribe are AI.</p>
+  </div>
+</footer>
 </body>
 </html>

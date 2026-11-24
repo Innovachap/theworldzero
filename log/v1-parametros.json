@@ -1,0 +1,540 @@
+{
+ "version": 1,
+ "reglas": {
+  "reproduccion": true,
+  "envejecimiento": true
+ },
+ "pasos_por_estacion": 3,
+ "edad_adulto": 15,
+ "agentes_activos_max": 8,
+ "conversaciones_por_paso": 2,
+ "turnos_max": 4,
+ "umbral_reflexion": 45,
+ "consumo": {
+  "adulto": 10,
+  "nino": 6
+ },
+ "rendimiento": {
+  "recolectar": 44,
+  "pescar": 28.6,
+  "caza_exito": 22,
+  "madera": 9,
+  "piedra": 6,
+  "pedernal": 3,
+  "arcilla": 6,
+  "semillas": 6,
+  "cosecha": 30
+ },
+ "estaciones": {
+  "primavera": {
+   "plantas": 1.0,
+   "frio": 15,
+   "presas": 1.0,
+   "pesca": 1.0
+  },
+  "verano": {
+   "plantas": 1.3,
+   "frio": 0,
+   "presas": 1.0,
+   "pesca": 1.1
+  },
+  "otoño": {
+   "plantas": 1.4,
+   "frio": 20,
+   "presas": 0.9,
+   "pesca": 1.0
+  },
+  "invierno": {
+   "plantas": 0.1275,
+   "frio": 49,
+   "presas": 0.4625,
+   "pesca": 0.5
+  }
+ },
+ "invierno_duro": {
+  "cada_anios": 3,
+  "prob_extra": 0.19,
+  "frio_extra": 22.5,
+  "presas": 0.6
+ },
+ "deterioro_comida": {
+  "base": 0.25,
+  "fuego": 0.18,
+  "ceramica": 0.08
+ },
+ "presas": {
+  "max": 100,
+  "inicial": 80,
+  "por_caza": 4,
+  "recuperacion": 0.12
+ },
+ "caza": {
+  "exito": 0.4,
+  "por_compañero": 0.1,
+  "lascas": 0.1,
+  "lanza": 0.15,
+  "herida": 0.05
+ },
+ "riesgos": {
+  "depredador_paso": 0.005,
+  "refugio_x": 0.6,
+  "invierno_x": 1.8,
+  "vigilar_x": 0.5,
+  "fuego_x": 0.5,
+  "lanza_x": 0.7,
+  "enfermedad_paso": 0.006,
+  "rio": 0.1,
+  "explorar_x": 2.0
+ },
+ "frio": {
+  "refugio": 10,
+  "cueva": 10,
+  "fuego": 30,
+  "brasa": 20,
+  "ropa": 20
+ },
+ "salud": {
+  "hambre_dano": 9,
+  "frio_dano": 7,
+  "enfermo_dano": 3.75,
+  "herida_dano": 30,
+  "ataque_dano": 40,
+  "recuperacion": 4,
+  "curar": 15
+ },
+ "mortalidad": [
+  [
+   0,
+   1,
+   0.02625
+  ],
+  [
+   1,
+   5,
+   0.009
+  ],
+  [
+   5,
+   12,
+   0.00375
+  ],
+  [
+   12,
+   40,
+   0.003
+  ],
+  [
+   40,
+   50,
+   0.009
+  ],
+  [
+   50,
+   60,
+   0.01875
+  ],
+  [
+   60,
+   200,
+   0.0525
+  ]
+ ],
+ "pareja": {
+  "edad_min": 18,
+  "enfriamiento_estaciones": 4,
+  "afinidad_max": 100,
+  "empujon_afinidad": 25
+ },
+ "nacimiento": {
+  "desde_anio": 2,
+  "gestacion_estaciones": 3,
+  "prob_estacion": 0.18,
+  "edad_min": 18,
+  "edad_max": 40,
+  "espaciado_estaciones": 8,
+  "hambre_max": 75,
+  "variacion": 0.08
+ },
+ "habilidades": {
+  "ganancia": 5.0,
+  "olvido_persona": 0.93,
+  "olvido_tribu": 0.8,
+  "ensenar": 0.3,
+  "imitar": 1.5
+ },
+ "eventos": {
+  "rayo_paso": 0.015,
+  "rayo_estaciones": [
+   "verano",
+   "otoño"
+  ],
+  "brasa_pasos": 2,
+  "brasa_invierno_apaga": 0.15,
+  "brasa_sin_practica_apaga": 0.3,
+  "brasa_practica": 30,
+  "fuego_olvido": 20,
+  "brote_prob": 0.3,
+  "brote_semillas": 3,
+  "forastero_anual": 0.15,
+  "explorar_hallazgo": 0.25
+ },
+ "reglas_fijas": {
+  "rio_dano": 45,
+  "rio_primavera_x": 2.0,
+  "cruzar_exito": 0.5,
+  "brasa_exito": 0.6,
+  "brasa_quemadura": 8,
+  "rastro_bonus": 0.08,
+  "carne_fuego_x": 1.2,
+  "cueva_riesgo": 0.3,
+  "vejez_desde": 45,
+  "enfermedad_fuego_x": 0.7,
+  "hambre_umbral": 70,
+  "frio_umbral": 60,
+  "curar_herida": 0.3,
+  "herida_sana": 0.15,
+  "cuidado_x": 1.5,
+  "semillas_fuera_temporada": 0.2
+ },
+ "especies": {
+  "ataque": {
+   "primavera": [
+    [
+     "wolf",
+     5
+    ],
+    [
+     "bear",
+     3
+    ],
+    [
+     "cave lion",
+     2
+    ]
+   ],
+   "verano": [
+    [
+     "wolf",
+     4
+    ],
+    [
+     "cave lion",
+     3
+    ],
+    [
+     "bear",
+     2
+    ],
+    [
+     "hyena",
+     1
+    ]
+   ],
+   "otoño": [
+    [
+     "bear",
+     4
+    ],
+    [
+     "wolf",
+     4
+    ],
+    [
+     "cave lion",
+     2
+    ]
+   ],
+   "invierno": [
+    [
+     "wolf",
+     7
+    ],
+    [
+     "cave lion",
+     2
+    ],
+    [
+     "bear",
+     1
+    ]
+   ]
+  },
+  "caza": {
+   "primavera": [
+    [
+     "deer",
+     5
+    ],
+    [
+     "boar",
+     3
+    ],
+    [
+     "hare",
+     2
+    ]
+   ],
+   "verano": [
+    [
+     "deer",
+     4
+    ],
+    [
+     "horse",
+     3
+    ],
+    [
+     "boar",
+     2
+    ],
+    [
+     "hare",
+     1
+    ]
+   ],
+   "otoño": [
+    [
+     "deer",
+     4
+    ],
+    [
+     "boar",
+     4
+    ],
+    [
+     "horse",
+     2
+    ]
+   ],
+   "invierno": [
+    [
+     "deer",
+     3
+    ],
+    [
+     "hare",
+     4
+    ],
+    [
+     "boar",
+     3
+    ]
+   ]
+  }
+ },
+ "tecnologias": [
+  {
+   "id": "refugio",
+   "nombre": "refugio en la entrada de la cueva",
+   "accion": "reforzar_cueva",
+   "requiere": [
+    {
+     "habilidad": {
+      "construccion": 18
+     },
+     "recursos": {
+      "madera": 6,
+      "piedra": 4
+     }
+    }
+   ],
+   "prob": 0.12,
+   "consume": {
+    "madera": 4,
+    "piedra": 3
+   }
+  },
+  {
+   "id": "lascas",
+   "nombre": "herramientas de piedra afilada",
+   "accion": "tallar_piedra",
+   "requiere": [
+    {
+     "habilidad": {
+      "tallado": 26
+     },
+     "recursos": {
+      "pedernal": 2
+     }
+    }
+   ],
+   "prob": 0.08,
+   "consume": {
+    "pedernal": 2
+   }
+  },
+  {
+   "id": "cuidado_heridas",
+   "nombre": "cuidado de heridas",
+   "accion": "curar",
+   "requiere": [
+    {
+     "habilidad": {
+      "curacion": 45
+     },
+     "recursos": {
+      "pieles": 1
+     }
+    }
+   ],
+   "prob": 0.08,
+   "consume": {
+    "pieles": 1
+   }
+  },
+  {
+   "id": "fuego",
+   "nombre": "hacer fuego",
+   "accion": [
+    "frotar_palos",
+    "golpear_pedernal"
+   ],
+   "requiere": [
+    {
+     "habilidad": {
+      "friccion": 56
+     },
+     "recursos": {
+      "madera": 1
+     },
+     "estaciones": [
+      "primavera",
+      "verano",
+      "otoño"
+     ]
+    },
+    {
+     "habilidad": {
+      "friccion": 38
+     },
+     "recursos": {
+      "madera": 1
+     },
+     "marcas": [
+      "fuego_visto"
+     ],
+     "estaciones": [
+      "primavera",
+      "verano",
+      "otoño"
+     ]
+    }
+   ],
+   "prob": 0.035,
+   "consume": {
+    "madera": 1
+   }
+  },
+  {
+   "id": "ropa",
+   "nombre": "ropa de piel cosida",
+   "accion": "coser_pieles",
+   "requiere": [
+    {
+     "avances": [
+      "lascas"
+     ],
+     "habilidad": {
+      "costura": 30
+     },
+     "recursos": {
+      "pieles": 3
+     }
+    }
+   ],
+   "prob": 0.08,
+   "consume": {
+    "pieles": 2
+   }
+  },
+  {
+   "id": "lanza",
+   "nombre": "lanza con punta de piedra",
+   "accion": "tallar_piedra",
+   "requiere": [
+    {
+     "avances": [
+      "lascas"
+     ],
+     "habilidad": {
+      "caza": 45,
+      "tallado": 20
+     },
+     "recursos": {
+      "madera": 2
+     }
+    }
+   ],
+   "prob": 0.05,
+   "consume": {
+    "madera": 1
+   }
+  },
+  {
+   "id": "ceramica",
+   "nombre": "cerámica cocida",
+   "accion": "modelar_arcilla",
+   "requiere": [
+    {
+     "avances": [
+      "fuego"
+     ],
+     "habilidad": {
+      "alfareria": 35
+     },
+     "recursos": {
+      "arcilla": 3
+     },
+     "estaciones": [
+      "primavera",
+      "verano"
+     ]
+    }
+   ],
+   "prob": 0.06,
+   "consume": {
+    "arcilla": 2
+   }
+  },
+  {
+   "id": "agricultura",
+   "nombre": "agricultura",
+   "accion": "sembrar",
+   "requiere": [
+    {
+     "avances": [
+      "lascas"
+     ],
+     "marcas": [
+      "brote_visto"
+     ],
+     "habilidad": {
+      "cultivo": 65,
+      "semillas": 52
+     },
+     "recursos": {
+      "semillas": 6
+     },
+     "estaciones": [
+      "primavera"
+     ]
+    }
+   ],
+   "prob": 0.02,
+   "consume": {
+    "semillas": 2
+   }
+  }
+ ],
+ "historial": [
+  {
+   "version": 1,
+   "fecha": "2026-11-23",
+   "anio": 1,
+   "cambios": [],
+   "desde": null,
+   "porque": "Primera versión",
+   "huella": "f774780569564319"
+  }
+ ]
+}

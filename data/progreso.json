@@ -1,0 +1,362 @@
+{
+ "_leeme": "Para agregar un Day: sumar un objeto a 'days' (misma forma que el Day 1), sus entradas en 'people' si cambia alguien y, si hay un descubrimiento, cambiar 'milestones'. Solo datos ya publicados. Cada cifra lleva su fuente. La pagina lo dibuja sola.",
+ "experiment": "World Zero",
+ "version": 1,
+ "updated": "2026-11-23",
+ "sources": {
+  "video": "Video del Day (tarjetas de estacion y escenas en pantalla)",
+  "desc": "Descripcion publica del video en YouTube",
+  "meet": "Video 'Meet the eight people living in my world' (retratos con nombre y edad en pantalla)"
+ },
+ "people": [
+  {
+   "id": "ama",
+   "name": "Ama",
+   "age_start": 52,
+   "portrait": "img/tribe-ama.webp",
+   "origin": "start",
+   "source": "meet"
+  },
+  {
+   "id": "toru",
+   "name": "Toru",
+   "age_start": 28,
+   "portrait": "img/tribe-toru.webp",
+   "origin": "start",
+   "source": "meet"
+  },
+  {
+   "id": "rak",
+   "name": "Rak",
+   "age_start": 35,
+   "portrait": "img/tribe-rak.webp",
+   "origin": "start",
+   "source": "meet"
+  },
+  {
+   "id": "neka",
+   "name": "Neka",
+   "age_start": 24,
+   "portrait": "img/tribe-neka.webp",
+   "origin": "start",
+   "source": "meet"
+  },
+  {
+   "id": "bako",
+   "name": "Bako",
+   "age_start": 26,
+   "portrait": "img/tribe-bako.webp",
+   "origin": "start",
+   "source": "meet"
+  },
+  {
+   "id": "lumi",
+   "name": "Lumi",
+   "age_start": 30,
+   "portrait": "img/tribe-lumi.webp",
+   "origin": "start",
+   "source": "meet"
+  },
+  {
+   "id": "iru",
+   "name": "Iru",
+   "age_start": 19,
+   "portrait": "img/tribe-iru.webp",
+   "origin": "start",
+   "source": "meet"
+  },
+  {
+   "id": "oki",
+   "name": "Oki",
+   "age_start": 9,
+   "portrait": "img/tribe-oki.webp",
+   "origin": "start",
+   "source": "meet"
+  },
+  {
+   "id": "rone",
+   "name": "Rone",
+   "age_start": null,
+   "portrait": null,
+   "origin": "arrived",
+   "arrived_day": 1,
+   "source": "video"
+  }
+ ],
+ "couples": [
+  {
+   "people": [
+    "toru",
+    "neka"
+   ],
+   "day": 1,
+   "season": "spring",
+   "source": "video"
+  },
+  {
+   "people": [
+    "ama",
+    "bako"
+   ],
+   "day": 1,
+   "season": "autumn",
+   "source": "video"
+  }
+ ],
+ "milestones": [
+  {
+   "id": "fire",
+   "name": {
+    "en": "Fire",
+    "es": "Fuego",
+    "pt": "Fogo",
+    "fr": "Feu",
+    "de": "Feuer"
+   },
+   "reached_day": null,
+   "source": "video"
+  },
+  {
+   "id": "stone",
+   "name": {
+    "en": "Sharper stone tools",
+    "es": "Herramientas de piedra afilada",
+    "pt": "Ferramentas de pedra afiada",
+    "fr": "Outils de pierre taillée",
+    "de": "Schärfere Steinwerkzeuge"
+   },
+   "reached_day": null,
+   "source": "video"
+  },
+  {
+   "id": "shelter",
+   "name": {
+    "en": "Shelter at the cave mouth",
+    "es": "Refugio en la entrada de la cueva",
+    "pt": "Abrigo na entrada da caverna",
+    "fr": "Abri à l'entrée de la grotte",
+    "de": "Unterschlupf am Höhleneingang"
+   },
+   "reached_day": null,
+   "source": "video"
+  },
+  {
+   "id": "wounds",
+   "name": {
+    "en": "Wound care",
+    "es": "Cuidado de heridas",
+    "pt": "Cuidado com feridas",
+    "fr": "Soin des blessures",
+    "de": "Wundversorgung"
+   },
+   "reached_day": null,
+   "source": "video"
+  }
+ ],
+ "days": [
+  {
+   "day": 1,
+   "year": 1,
+   "date": "2026-11-23",
+   "ytid": "Z0EItvUk2rA",
+   "title": {
+    "en": "World Zero · v1 · Day 1 (Year 1)",
+    "es": "World Zero · v1 · Día 1 (Año 1)",
+    "pt": "World Zero · v1 · Dia 1 (Ano 1)",
+    "fr": "World Zero · v1 · Jour 1 (Année 1)",
+    "de": "World Zero · v1 · Tag 1 (Jahr 1)"
+   },
+   "headline": {
+    "en": "Something changes",
+    "es": "Algo cambia",
+    "pt": "Algo muda",
+    "fr": "Quelque chose change",
+    "de": "Etwas ändert sich"
+   },
+   "thumb": "https://i.ytimg.com/vi/Z0EItvUk2rA/hqdefault.jpg",
+   "totals": {
+    "alive": 9,
+    "births": 0,
+    "deaths": 0,
+    "arrivals": 1,
+    "discoveries": 0,
+    "source": "video"
+   },
+   "totals_note": "alive 9 = 8 at the start + Rone (arrived); births and deaths 0 derived from the alive count staying at 9 every season and from the member list; nobody is shown being born or dying",
+   "seasons": {
+    "spring": {
+     "alive": 9,
+     "food": 51,
+     "gathered": {
+      "times": 7,
+      "portions": 86.0
+     },
+     "hunted": {
+      "times": 3
+     },
+     "fished": {
+      "times": 1,
+      "portions": 7.0
+     },
+     "source": "video",
+     "image": "img/day1-spring.webp"
+    },
+    "summer": {
+     "alive": 9,
+     "food": 117,
+     "gathered": {
+      "times": 9,
+      "portions": 179.0
+     },
+     "hunted": {
+      "times": 2
+     },
+     "fished": {
+      "times": 1,
+      "portions": 11.0
+     },
+     "source": "video",
+     "image": "img/day1-summer.webp"
+    },
+    "autumn": {
+     "alive": 9,
+     "food": 215,
+     "gathered": {
+      "times": 12,
+      "portions": 242.0
+     },
+     "hunted": {
+      "times": 1
+     },
+     "fished": {
+      "times": 1,
+      "portions": 11.0
+     },
+     "source": "video",
+     "image": "img/day1-autumn.webp"
+    },
+    "winter": {
+     "alive": 9,
+     "food": 121,
+     "gathered": {
+      "times": 8,
+      "portions": 19.0
+     },
+     "hunted": {
+      "times": 0
+     },
+     "fished": {
+      "times": 3,
+      "portions": 14.0
+     },
+     "source": "video",
+     "image": "img/day1-winter.webp"
+    }
+   },
+   "events": [
+    {
+     "season": "spring",
+     "type": "couple",
+     "text": {
+      "en": "Toru and Neka became a couple, and Rone arrived from another place.",
+      "es": "Toru y Neka se hicieron pareja, y Rone llegó desde otro lugar.",
+      "pt": "Toru e Neka se tornaram um casal, e Rone chegou de outro lugar.",
+      "fr": "Toru et Neka sont devenus un couple, et Rone est arrivé d'un autre endroit.",
+      "de": "Toru und Neka wurden ein Paar, und Rone kam von einem anderen Ort."
+     },
+     "source": "video",
+     "image": "img/day1-toru-neka.webp"
+    },
+    {
+     "season": "summer",
+     "type": "hunt",
+     "text": {
+      "en": "They went hunting twice, and they caught nothing each time.",
+      "es": "Salieron a cazar dos veces, y no atraparon nada en ninguna.",
+      "pt": "Foram caçar duas vezes, e não conseguiram nada nas duas.",
+      "fr": "Ils sont partis chasser deux fois, et chaque fois ils n'ont rien attrapé.",
+      "de": "Zweimal gingen sie jagen, und jedes Mal fingen sie nichts."
+     },
+     "source": "video"
+    },
+    {
+     "season": "autumn",
+     "type": "couple",
+     "text": {
+      "en": "Ama and Bako became a couple.",
+      "es": "Ama y Bako se hicieron pareja.",
+      "pt": "Ama e Bako se tornaram um casal.",
+      "fr": "Ama et Bako sont devenus un couple.",
+      "de": "Ama und Bako wurden ein Paar."
+     },
+     "source": "video",
+     "image": "img/day1-ama-bako.webp"
+    },
+    {
+     "season": "winter",
+     "type": "illness",
+     "text": {
+      "en": "Neka fell ill with fever.",
+      "es": "Neka cayó enferma con fiebre.",
+      "pt": "Neka caiu doente com febre.",
+      "fr": "Neka est tombée malade, avec de la fièvre.",
+      "de": "Neka bekam Fieber."
+     },
+     "source": "video",
+     "image": "img/day1-neka-ill.webp"
+    },
+    {
+     "season": "winter",
+     "type": "care",
+     "text": {
+      "en": "Once, they looked after a sick person.",
+      "es": "En una ocasión, cuidaron a una persona enferma.",
+      "pt": "Uma vez, cuidaram de uma pessoa doente.",
+      "fr": "Une fois, ils se sont occupés d'une personne malade.",
+      "de": "Einmal kümmerten sie sich um einen kranken Menschen."
+     },
+     "source": "video"
+    },
+    {
+     "season": "year",
+     "type": "river",
+     "text": {
+      "en": "Iru crossed the river and found a path to come back.",
+      "es": "Iru cruzó el río y encontró un camino para volver.",
+      "pt": "Iru atravessou o rio e encontrou um caminho para voltar.",
+      "fr": "Iru a traversé la rivière et trouvé un chemin pour revenir.",
+      "de": "Iru überquerte den Fluss und fand einen Weg zurück."
+     },
+     "source": "video"
+    }
+   ],
+   "notes": {
+    "moderation_filtered": 11,
+    "rerun": true,
+    "source": "desc"
+   }
+  }
+ ],
+ "specials": [
+  {
+   "ytid": "1P0STwFFDDE",
+   "title": {
+    "en": "Meet the eight people living in my world.",
+    "es": "Te presento a las ocho personas que viven en mi mundo.",
+    "pt": "Conheça as oito pessoas que vivem no meu mundo.",
+    "fr": "Rencontrez les huit personnes qui vivent dans mon monde.",
+    "de": "Lernt die acht Menschen kennen, die in meiner Welt leben."
+   },
+   "thumb": "https://i.ytimg.com/vi/1P0STwFFDDE/hqdefault.jpg",
+   "kind": "intro"
+  }
+ ],
+ "log": {
+  "files": [
+   {
+    "path": "log/v1-parametros.json"
+   }
+  ],
+  "pending": "Day 1 run JSONs"
+ }
+}
