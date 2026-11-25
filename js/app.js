@@ -82,7 +82,7 @@
       SEASONS.forEach(function (s) {
         var x = d.seasons[s]; if (!x) return;
         h += '<li class="season s-' + s + '">' +
-          img(x.image, t(lang, 'season_alt', { s: t(lang, 's_' + s), d: d.day, a: x.alive, f: x.food }), 360, 640) +
+          (x.image ? img(x.image, t(lang, 'season_alt', { s: t(lang, 's_' + s), d: d.day, a: x.alive, f: x.food }), 360, 640) : '') +
           '<div class="sbody"><h4>' + esc(t(lang, 's_' + s)) + '</h4><ul>' +
           '<li>' + esc(t(lang, 'ss_alive', { n: x.alive })) + '</li>' +
           '<li>' + esc(t(lang, 'ss_food', { n: x.food })) + '</li>' +

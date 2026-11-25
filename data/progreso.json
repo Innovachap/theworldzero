@@ -2,7 +2,7 @@
  "_leeme": "Para agregar un Day: sumar un objeto a 'days' (misma forma que el Day 1), sus entradas en 'people' si cambia alguien y, si hay un descubrimiento, cambiar 'milestones'. Solo datos ya publicados. Cada cifra lleva su fuente. La pagina lo dibuja sola.",
  "experiment": "World Zero",
  "version": 1,
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "sources": {
   "video": "Video del Day (tarjetas de estacion y escenas en pantalla)",
   "desc": "Descripcion publica del video en YouTube",
@@ -335,6 +335,72 @@
     "rerun": true,
     "source": "desc"
    }
+  },
+  {
+   "day": 2,
+   "year": 2,
+   "date": "2026-11-24",
+   "ytid": "NhsyQsXymkM",
+   "title": {
+    "en": "A quiet year · World Zero v1 · Day 2",
+    "es": "A quiet year · World Zero v1 · Day 2",
+    "pt": "A quiet year · World Zero v1 · Day 2",
+    "fr": "A quiet year · World Zero v1 · Day 2",
+    "de": "A quiet year · World Zero v1 · Day 2"
+   },
+   "headline": {
+    "en": "A quiet year",
+    "es": "Un año tranquilo",
+    "pt": "Um ano tranquilo",
+    "fr": "Une année calme",
+    "de": "Ein ruhiges Jahr"
+   },
+   "thumb": "https://i.ytimg.com/vi/NhsyQsXymkM/hqdefault.jpg",
+   "totals": {
+    "alive": 9,
+    "births": 0,
+    "deaths": 0,
+    "arrivals": 0,
+    "discoveries": 0,
+    "source": "video"
+   },
+   "totals_note": "9 alive every season; 0 births and 0 deaths (Canales, data from the published Day 2); arrivals and discoveries 0 because none are told",
+   "seasons": {
+    "spring": {
+     "alive": 9,
+     "food": 158,
+     "source": "video"
+    },
+    "summer": {
+     "alive": 9,
+     "food": 179,
+     "source": "video"
+    },
+    "autumn": {
+     "alive": 9,
+     "food": 278,
+     "source": "video"
+    },
+    "winter": {
+     "alive": 9,
+     "food": 157,
+     "source": "video"
+    }
+   },
+   "events": [
+    {
+     "season": "winter",
+     "type": "illness",
+     "text": {
+      "en": "Lumi had a fever. Two times, they cared for Lumi.",
+      "es": "Lumi tuvo fiebre. Dos veces la cuidaron.",
+      "pt": "Lumi teve febre. Duas vezes cuidaram de Lumi.",
+      "fr": "Lumi a eu de la fièvre. Deux fois, ils se sont occupés de Lumi.",
+      "de": "Lumi hatte Fieber. Zweimal kümmerten sie sich um Lumi."
+     },
+     "source": "video"
+    }
+   ]
   }
  ],
  "specials": [
