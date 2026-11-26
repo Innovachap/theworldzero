@@ -81,6 +81,16 @@
    "origin": "arrived",
    "arrived_day": 1,
    "source": "video"
+  },
+  {
+   "id": "ota",
+   "name": "Ota",
+   "age_start": null,
+   "portrait": null,
+   "origin": "born",
+   "born_day": 3,
+   "parents": "Neka & Toru",
+   "source": "engine"
   }
  ],
  "couples": [
@@ -399,6 +409,135 @@
       "de": "Lumi hatte Fieber. Zweimal kümmerten sie sich um Lumi."
      },
      "source": "video"
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "year": 3,
+   "date": "2026-11-25",
+   "ytid": "b23EJmvzfYw",
+   "title": {
+    "en": "An AI is running 10 people's lives. Year 3: a baby is born · World Zero v1 · Day 3",
+    "es": "An AI is running 10 people's lives. Year 3: a baby is born · World Zero v1 · Day 3",
+    "pt": "An AI is running 10 people's lives. Year 3: a baby is born · World Zero v1 · Day 3",
+    "fr": "An AI is running 10 people's lives. Year 3: a baby is born · World Zero v1 · Day 3",
+    "de": "An AI is running 10 people's lives. Year 3: a baby is born · World Zero v1 · Day 3"
+   },
+   "headline": {
+    "en": "A baby is born",
+    "es": "Nace una bebé",
+    "pt": "Nasce uma bebê",
+    "fr": "Une petite fille naît",
+    "de": "Ein Mädchen wird geboren"
+   },
+   "thumb": "https://i.ytimg.com/vi/b23EJmvzfYw/hqdefault.jpg",
+   "totals": {
+    "alive": 10,
+    "births": 1,
+    "deaths": 0,
+    "arrivals": 0,
+    "discoveries": 0,
+    "source": "engine"
+   },
+   "totals_note": "9 alive at the start, 10 at the end (Ota born in winter); from the engine's official summary resumen.md, Day 3",
+   "seasons": {
+    "spring": {
+     "alive": 9,
+     "food": 197,
+     "hunted": {
+      "times": 1
+     },
+     "source": "engine"
+    },
+    "summer": {
+     "alive": 9,
+     "food": 367,
+     "source": "engine"
+    },
+    "autumn": {
+     "alive": 9,
+     "food": 394,
+     "source": "engine"
+    },
+    "winter": {
+     "alive": 10,
+     "food": 265,
+     "source": "engine"
+    }
+   },
+   "events": [
+    {
+     "season": "spring",
+     "type": "pregnancy",
+     "text": {
+      "en": "Neka is expecting a child with Toru.",
+      "es": "Neka espera un hijo de Toru.",
+      "pt": "Neka espera um filho de Toru.",
+      "fr": "Neka attend un enfant de Toru.",
+      "de": "Neka erwartet ein Kind von Toru."
+     },
+     "source": "engine"
+    },
+    {
+     "season": "spring",
+     "type": "seeds",
+     "text": {
+      "en": "For the first time, someone gathered seeds to keep instead of eating them. They found almost none.",
+      "es": "Por primera vez alguien juntó semillas para guardarlas en vez de comerlas. Casi no encontró.",
+      "pt": "Pela primeira vez alguém juntou sementes para guardar em vez de comer. Quase não encontrou.",
+      "fr": "Pour la première fois, quelqu'un a ramassé des graines pour les garder au lieu de les manger. Il n'en a presque pas trouvé.",
+      "de": "Zum ersten Mal sammelte jemand Samen, um sie aufzubewahren statt sie zu essen. Er fand fast keine."
+     },
+     "source": "engine"
+    },
+    {
+     "season": "summer",
+     "type": "attack",
+     "text": {
+      "en": "A large animal attacked Iru far from the cave.",
+      "es": "Un animal grande atacó a Iru lejos de la cueva.",
+      "pt": "Um animal grande atacou Iru longe da caverna.",
+      "fr": "Un grand animal a attaqué Iru loin de la grotte.",
+      "de": "Ein großes Tier griff Iru weit weg von der Höhle an."
+     },
+     "source": "engine"
+    },
+    {
+     "season": "winter",
+     "type": "winter",
+     "text": {
+      "en": "A hard winter came: cold, and few animals.",
+      "es": "Llegó un invierno duro: frío y pocos animales.",
+      "pt": "Chegou um inverno duro: frio e poucos animais.",
+      "fr": "Un hiver rude est arrivé : du froid et peu d'animaux.",
+      "de": "Ein harter Winter kam: Kälte und wenige Tiere."
+     },
+     "source": "engine"
+    },
+    {
+     "season": "winter",
+     "type": "birth",
+     "text": {
+      "en": "Ota was born, a girl, daughter of Neka and Toru.",
+      "es": "Nació Ota, una niña, hija de Neka y Toru.",
+      "pt": "Nasceu Ota, uma menina, filha de Neka e Toru.",
+      "fr": "Ota est née, une fille, fille de Neka et Toru.",
+      "de": "Ota wurde geboren, ein Mädchen, Tochter von Neka und Toru."
+     },
+     "source": "engine"
+    },
+    {
+     "season": "winter",
+     "type": "illness",
+     "text": {
+      "en": "Neka fell ill with fever.",
+      "es": "Neka cayó enferma con fiebre.",
+      "pt": "Neka caiu doente com febre.",
+      "fr": "Neka est tombée malade, avec de la fièvre.",
+      "de": "Neka bekam Fieber."
+     },
+     "source": "engine"
     }
    ]
   }

@@ -118,7 +118,7 @@
         h += img(p.portrait, t(lang, 'p_alt', { name: p.name, n: p.age_start }), 330, 440);
       }
       h += '<div class="pbody"><h3>' + esc(p.name) + '</h3><p class="alive">' + esc(t(lang, 'p_alive')) + '</p>' +
-        (p.portrait ? '<p class="small">' + esc(t(lang, 'p_age', { n: p.age_start })) + '</p>' : '<p class="small">' + esc(t(lang, 'p_arrived', { d: p.arrived_day })) + '</p>') +
+        (p.portrait ? '<p class="small">' + esc(t(lang, 'p_age', { n: p.age_start })) + '</p>' : '<p class="small">' + esc(p.origin === 'born' ? t(lang, 'p_born', { d: p.born_day, m: p.parents || '' }) : t(lang, 'p_arrived', { d: p.arrived_day })) + '</p>') +
         (couple ? '<p class="small couple">' + esc(couple) + '</p>' : '') +
         '</div></li>';
     });
