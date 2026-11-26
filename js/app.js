@@ -31,13 +31,20 @@
 
   /* ---------- vistas ---------- */
   function lastDay(data) { return data.days[data.days.length - 1]; }
+  /* Desde el Day 4 un Day cubre varios años: year..year_end y 'years' en vez de 'seasons'. */
+  function yearSpan(d) { return d.year_end ? d.year + '–' + d.year_end : d.year; }
+  function chipText(e, lang) {
+    var s = e.season && e.season !== 'year' ? t(lang, 's_' + e.season) : '';
+    if (e.year) return t(lang, 'y_label', { y: e.year }) + (s ? ' · ' + s : '');
+    return t(lang, 's_' + e.season);
+  }
 
   function viewCounters(data, lang) {
     var d = lastDay(data), tt = d.totals;
     var found = 0;
     data.milestones.forEach(function (m) { if (m.reached_day != null) found++; });
     var items = [
-      ['c_year', d.year], ['c_alive', tt.alive], ['c_births', tt.births],
+      ['c_year', d.year_end || d.year], ['c_alive', tt.alive], ['c_births', tt.births],
       ['c_deaths', tt.deaths], ['c_arrived', tt.arrivals], ['c_found', found]
     ];
     var h = '<ul class="counters">';
@@ -49,6 +56,17 @@
 
   function viewFood(data, lang) {
     var d = lastDay(data), max = 0;
+    if (d.years) {
+      d.years.forEach(function (y) { max = Math.max(max, y.food_end); });
+      var hy = '<ul class="bars">';
+      d.years.forEach(function (y) {
+        var wy = max ? Math.max(4, Math.round(y.food_end / max * 100)) : 0;
+        hy += '<li class="s-year"><span class="bl">' + esc(t(lang, 'y_label', { y: y.year })) + '</span>' +
+          '<span class="bar"><span style="width:' + wy + '%"></span></span>' +
+          '<span class="bv">' + esc(y.food_end) + '</span></li>';
+      });
+      return hy + '</ul>';
+    }
     SEASONS.forEach(function (s) { if (d.seasons[s]) max = Math.max(max, d.seasons[s].food); });
     var h = '<ul class="bars">';
     SEASONS.forEach(function (s) {
@@ -75,12 +93,18 @@
   function viewTimeline(data, lang) {
     var h = '';
     data.days.slice().reverse().forEach(function (d) {
-      h += '<article class="day"><header><h3>' + esc(t(lang, 'day_head', { d: d.day, y: d.year })) +
+      h += '<article class="day"><header><h3>' + esc(t(lang, 'day_head', { d: d.day, y: yearSpan(d) })) +
         '<span class="dt">' + esc(pick(d.headline, lang)) + '</span></h3>' +
         '<a class="link" href="' + YT + esc(d.ytid) + '">' + esc(t(lang, 'watch_yt')) + '</a></header>';
       h += '<ol class="seasons">';
+      (d.years || []).forEach(function (y) {
+        h += '<li class="season s-year"><div class="sbody"><h4>' + esc(t(lang, 'y_label', { y: y.year })) + '</h4><ul>' +
+          '<li>' + esc(t(lang, 'ys_alive', { a: y.alive_start, b: y.alive_end })) + '</li>' +
+          '<li>' + esc(t(lang, 'ys_food', { a: y.food_start, b: y.food_end })) + '</li>' +
+          '</ul></div></li>';
+      });
       SEASONS.forEach(function (s) {
-        var x = d.seasons[s]; if (!x) return;
+        var x = d.seasons && d.seasons[s]; if (!x) return;
         h += '<li class="season s-' + s + '">' +
           (x.image ? img(x.image, t(lang, 'season_alt', { s: t(lang, 's_' + s), d: d.day, a: x.alive, f: x.food }), 360, 640) : '') +
           '<div class="sbody"><h4>' + esc(t(lang, 's_' + s)) + '</h4><ul>' +
@@ -95,7 +119,7 @@
       d.events.forEach(function (e) {
         h += '<li class="ev' + (e.image ? ' withimg' : '') + '">' +
           (e.image ? img(e.image, t(lang, 'event_alt', { d: d.day }), 360, 640) : '') +
-          '<div><span class="chip s-' + esc(e.season) + '">' + esc(t(lang, 's_' + e.season)) + '</span>' +
+          '<div><span class="chip s-' + esc(e.season) + '">' + esc(chipText(e, lang)) + '</span>' +
           '<p>' + esc(pick(e.text, lang)) + '</p></div></li>';
       });
       h += '</ul></article>';
@@ -117,8 +141,13 @@
       if (p.portrait) {
         h += img(p.portrait, t(lang, 'p_alt', { name: p.name, n: p.age_start }), 330, 440);
       }
-      h += '<div class="pbody"><h3>' + esc(p.name) + '</h3><p class="alive">' + esc(t(lang, 'p_alive')) + '</p>' +
-        (p.portrait ? '<p class="small">' + esc(t(lang, 'p_age', { n: p.age_start })) + '</p>' : '<p class="small">' + esc(p.origin === 'born' ? t(lang, 'p_born', { d: p.born_day, m: p.parents || '' }) : t(lang, 'p_arrived', { d: p.arrived_day })) + '</p>') +
+      var dead = p.died_day != null;
+      var origin = p.origin === 'born'
+        ? t(lang, p.sex === 'f' ? 'p_born' : 'p_born_n', { d: p.born_day, m: p.parents || '' })
+        : t(lang, 'p_arrived', { d: p.arrived_day });
+      h += '<div class="pbody"><h3>' + esc(p.name) + '</h3><p class="' + (dead ? 'dead' : 'alive') + '">' +
+        esc(dead ? t(lang, 'p_died', { d: p.died_day, n: p.died_age }) : t(lang, 'p_alive')) + '</p>' +
+        (p.portrait ? '<p class="small">' + esc(t(lang, 'p_age', { n: p.age_start })) + '</p>' : '<p class="small">' + esc(origin) + '</p>') +
         (couple ? '<p class="small couple">' + esc(couple) + '</p>' : '') +
         '</div></li>';
     });
