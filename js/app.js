@@ -143,7 +143,7 @@
       }
       var dead = p.died_day != null;
       var origin = p.origin === 'born'
-        ? t(lang, p.sex === 'f' ? 'p_born' : 'p_born_n', { d: p.born_day, m: p.parents || '' })
+        ? t(lang, p.sex === 'f' ? 'p_born' : p.sex === 'm' ? 'p_born_m' : 'p_born_n', { d: p.born_day, m: p.parents || '' })
         : t(lang, 'p_arrived', { d: p.arrived_day });
       h += '<div class="pbody"><h3>' + esc(p.name) + '</h3><p class="' + (dead ? 'dead' : 'alive') + '">' +
         esc(dead ? t(lang, 'p_died', { d: p.died_day, n: p.died_age }) : t(lang, 'p_alive')) + '</p>' +
