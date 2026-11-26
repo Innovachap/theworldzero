@@ -2,7 +2,7 @@
  "_leeme": "Para agregar un Day: sumar un objeto a 'days' (misma forma que el Day 1), sus entradas en 'people' si cambia alguien y, si hay un descubrimiento, cambiar 'milestones'. Solo datos ya publicados. Cada cifra lleva su fuente. La pagina lo dibuja sola.",
  "experiment": "World Zero",
  "version": 1,
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "sources": {
   "video": "Video del Day (tarjetas de estacion y escenas en pantalla)",
   "desc": "Descripcion publica del video en YouTube",
@@ -160,11 +160,11 @@
    "date": "2026-11-23",
    "ytid": "Z0EItvUk2rA",
    "title": {
-    "en": "World Zero · v1 · Day 1 (Year 1)",
-    "es": "World Zero · v1 · Día 1 (Año 1)",
-    "pt": "World Zero · v1 · Dia 1 (Ano 1)",
-    "fr": "World Zero · v1 · Jour 1 (Année 1)",
-    "de": "World Zero · v1 · Tag 1 (Jahr 1)"
+    "en": "An AI is running 8 people's lives. Year 1: two couples form · World Zero v1 · Day 1",
+    "es": "An AI is running 8 people's lives. Year 1: two couples form · World Zero v1 · Day 1",
+    "pt": "An AI is running 8 people's lives. Year 1: two couples form · World Zero v1 · Day 1",
+    "fr": "An AI is running 8 people's lives. Year 1: two couples form · World Zero v1 · Day 1",
+    "de": "An AI is running 8 people's lives. Year 1: two couples form · World Zero v1 · Day 1"
    },
    "headline": {
     "en": "Something changes",
@@ -342,11 +342,11 @@
    "date": "2026-11-24",
    "ytid": "NhsyQsXymkM",
    "title": {
-    "en": "A quiet year · World Zero v1 · Day 2",
-    "es": "A quiet year · World Zero v1 · Day 2",
-    "pt": "A quiet year · World Zero v1 · Day 2",
-    "fr": "A quiet year · World Zero v1 · Day 2",
-    "de": "A quiet year · World Zero v1 · Day 2"
+    "en": "An AI is running 8 people's lives. Year 2: no one is born · World Zero v1 · Day 2",
+    "es": "An AI is running 8 people's lives. Year 2: no one is born · World Zero v1 · Day 2",
+    "pt": "An AI is running 8 people's lives. Year 2: no one is born · World Zero v1 · Day 2",
+    "fr": "An AI is running 8 people's lives. Year 2: no one is born · World Zero v1 · Day 2",
+    "de": "An AI is running 8 people's lives. Year 2: no one is born · World Zero v1 · Day 2"
    },
    "headline": {
     "en": "A quiet year",
