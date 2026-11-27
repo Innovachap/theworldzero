@@ -2,7 +2,7 @@
  "_leeme": "Para agregar un Day: sumar un objeto a 'days' (misma forma que el Day 1), sus entradas en 'people' si cambia alguien y, si hay un descubrimiento, cambiar 'milestones'. Solo datos ya publicados. Cada cifra lleva su fuente. La pagina lo dibuja sola.",
  "experiment": "World Zero",
  "version": 1,
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "sources": {
   "video": "Video del Day (tarjetas de estacion y escenas en pantalla)",
   "desc": "Descripcion publica del video en YouTube",
@@ -31,7 +31,9 @@
    "age_start": 35,
    "portrait": "img/tribe-rak.webp",
    "origin": "start",
-   "source": "meet"
+   "source": "meet",
+   "died_day": 4,
+   "died_age": 41
   },
   {
    "id": "neka",
@@ -90,7 +92,41 @@
    "origin": "born",
    "born_day": 3,
    "parents": "Neka & Toru",
+   "source": "engine",
+   "sex": "f"
+  },
+  {
+   "id": "ona",
+   "name": "Ona",
+   "age_start": null,
+   "portrait": null,
+   "origin": "arrived",
+   "arrived_day": 4,
+   "died_day": 4,
+   "died_age": 28,
    "source": "engine"
+  },
+  {
+   "id": "rura",
+   "name": "Rura",
+   "age_start": null,
+   "portrait": null,
+   "origin": "born",
+   "born_day": 4,
+   "parents": "Lumi & Rak",
+   "source": "engine",
+   "sex": "m"
+  },
+  {
+   "id": "mima",
+   "name": "Mima",
+   "age_start": null,
+   "portrait": null,
+   "origin": "born",
+   "born_day": 4,
+   "parents": "Neka & Toru",
+   "source": "engine",
+   "sex": "m"
   }
  ],
  "couples": [
@@ -159,7 +195,7 @@
     "fr": "Soin des blessures",
     "de": "Wundversorgung"
    },
-   "reached_day": null,
+   "reached_day": 4,
    "source": "video"
   }
  ],
@@ -199,14 +235,14 @@
      "food": 51,
      "gathered": {
       "times": 7,
-      "portions": 86.0
+      "portions": 86
      },
      "hunted": {
       "times": 3
      },
      "fished": {
       "times": 1,
-      "portions": 7.0
+      "portions": 7
      },
      "source": "video",
      "image": "img/day1-spring.webp"
@@ -216,14 +252,14 @@
      "food": 117,
      "gathered": {
       "times": 9,
-      "portions": 179.0
+      "portions": 179
      },
      "hunted": {
       "times": 2
      },
      "fished": {
       "times": 1,
-      "portions": 11.0
+      "portions": 11
      },
      "source": "video",
      "image": "img/day1-summer.webp"
@@ -233,14 +269,14 @@
      "food": 215,
      "gathered": {
       "times": 12,
-      "portions": 242.0
+      "portions": 242
      },
      "hunted": {
       "times": 1
      },
      "fished": {
       "times": 1,
-      "portions": 11.0
+      "portions": 11
      },
      "source": "video",
      "image": "img/day1-autumn.webp"
@@ -250,14 +286,14 @@
      "food": 121,
      "gathered": {
       "times": 8,
-      "portions": 19.0
+      "portions": 19
      },
      "hunted": {
       "times": 0
      },
      "fished": {
       "times": 3,
-      "portions": 14.0
+      "portions": 14
      },
      "source": "video",
      "image": "img/day1-winter.webp"
@@ -536,6 +572,285 @@
       "pt": "Neka caiu doente com febre.",
       "fr": "Neka est tombée malade, avec de la fièvre.",
       "de": "Neka bekam Fieber."
+     },
+     "source": "engine"
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "year": 4,
+   "year_end": 8,
+   "date": "2026-11-26",
+   "ytid": "Nwe9JKBA2EQ",
+   "title": {
+    "en": "An AI is running 11 people's lives. Years 4-8: 2 born, 2 died · World Zero v1 · Day 4",
+    "es": "An AI is running 11 people's lives. Years 4-8: 2 born, 2 died · World Zero v1 · Day 4",
+    "pt": "An AI is running 11 people's lives. Years 4-8: 2 born, 2 died · World Zero v1 · Day 4",
+    "fr": "An AI is running 11 people's lives. Years 4-8: 2 born, 2 died · World Zero v1 · Day 4",
+    "de": "An AI is running 11 people's lives. Years 4-8: 2 born, 2 died · World Zero v1 · Day 4"
+   },
+   "headline": {
+    "en": "Rak dies, and Ama learns to treat wounds",
+    "es": "Muere Rak, y Ama aprende a curar heridas",
+    "pt": "Rak morre, e Ama aprende a tratar feridas",
+    "fr": "Rak meurt, et Ama apprend à soigner les blessures",
+    "de": "Rak stirbt, und Ama lernt, Wunden zu versorgen"
+   },
+   "thumb": "https://i.ytimg.com/vi/Nwe9JKBA2EQ/hqdefault.jpg",
+   "totals": {
+    "alive": 11,
+    "births": 2,
+    "deaths": 2,
+    "arrivals": 1,
+    "discoveries": 1,
+    "source": "engine"
+   },
+   "totals_note": "Years 4 to 8: 10 alive at the start, 11 at the end; born Rura and Mima, died Rak and Ona, arrived Ona; 6 animal attacks. Discovery: wound care. Engine summary sent by Canales on 26-11.",
+   "years": [
+    {
+     "year": 4,
+     "alive_start": 10,
+     "alive_end": 10,
+     "food_start": 265,
+     "food_end": 214
+    },
+    {
+     "year": 5,
+     "alive_start": 10,
+     "alive_end": 11,
+     "food_start": 214,
+     "food_end": 100
+    },
+    {
+     "year": 6,
+     "alive_start": 11,
+     "alive_end": 11,
+     "food_start": 100,
+     "food_end": 41
+    },
+    {
+     "year": 7,
+     "alive_start": 11,
+     "alive_end": 11,
+     "food_start": 41,
+     "food_end": 64
+    },
+    {
+     "year": 8,
+     "alive_start": 11,
+     "alive_end": 11,
+     "food_start": 64,
+     "food_end": 44
+    }
+   ],
+   "seasons": {},
+   "events": [
+    {
+     "year": 4,
+     "season": "year",
+     "type": "attack",
+     "text": {
+      "en": "Animals attacked Rak and Lumi.",
+      "es": "Animales atacaron a Rak y a Lumi.",
+      "pt": "Animais atacaram Rak e Lumi.",
+      "fr": "Des animaux ont attaqué Rak et Lumi.",
+      "de": "Tiere griffen Rak und Lumi an."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 4,
+     "season": "year",
+     "type": "seeds",
+     "text": {
+      "en": "Some stored seeds sprouted on their own.",
+      "es": "Unas semillas guardadas brotaron solas.",
+      "pt": "Algumas sementes guardadas brotaram sozinhas.",
+      "fr": "Des graines gardées ont germé toutes seules.",
+      "de": "Einige aufbewahrte Samen keimten von selbst."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 4,
+     "season": "year",
+     "type": "explore",
+     "text": {
+      "en": "Iru found a wall of flint.",
+      "es": "Iru encontró una pared de pedernal.",
+      "pt": "Iru encontrou uma parede de sílex.",
+      "fr": "Iru a trouvé une paroi de silex.",
+      "de": "Iru fand eine Wand aus Feuerstein."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 5,
+     "season": "spring",
+     "type": "birth",
+     "text": {
+      "en": "Rura was born, son of Lumi and Rak.",
+      "es": "Nació Rura, hijo de Lumi y Rak.",
+      "pt": "Nasceu Rura, filho de Lumi e Rak.",
+      "fr": "Rura est né, fils de Lumi et Rak.",
+      "de": "Rura wurde geboren, Sohn von Lumi und Rak."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 5,
+     "season": "year",
+     "type": "illness",
+     "text": {
+      "en": "Rone fell ill with fever.",
+      "es": "Rone se enfermó con fiebre.",
+      "pt": "Rone ficou doente com febre.",
+      "fr": "Rone est tombé malade, avec de la fièvre.",
+      "de": "Rone bekam Fieber."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 6,
+     "season": "year",
+     "type": "fire",
+     "text": {
+      "en": "Lightning set a tree on fire.",
+      "es": "Un rayo hizo arder un árbol.",
+      "pt": "Um raio fez uma árvore pegar fogo.",
+      "fr": "La foudre a mis le feu à un arbre.",
+      "de": "Ein Blitz setzte einen Baum in Brand."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 6,
+     "season": "winter",
+     "type": "winter",
+     "text": {
+      "en": "A hard winter came.",
+      "es": "Llegó un invierno duro.",
+      "pt": "Chegou um inverno duro.",
+      "fr": "Un hiver rude est arrivé.",
+      "de": "Ein harter Winter kam."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 6,
+     "season": "year",
+     "type": "attack",
+     "text": {
+      "en": "An animal attacked Neka.",
+      "es": "Un animal atacó a Neka.",
+      "pt": "Um animal atacou Neka.",
+      "fr": "Un animal a attaqué Neka.",
+      "de": "Ein Tier griff Neka an."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 7,
+     "season": "spring",
+     "type": "death",
+     "text": {
+      "en": "Rak died of an illness, aged 41.",
+      "es": "Murió Rak, de una enfermedad, a los 41 años.",
+      "pt": "Rak morreu de uma doença, aos 41 anos.",
+      "fr": "Rak est mort d'une maladie, à 41 ans.",
+      "de": "Rak starb mit 41 Jahren an einer Krankheit."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 7,
+     "season": "spring",
+     "type": "arrival",
+     "text": {
+      "en": "Ona arrived from another place.",
+      "es": "Llegó Ona desde otro lugar.",
+      "pt": "Ona chegou de outro lugar.",
+      "fr": "Ona est arrivée d'un autre endroit.",
+      "de": "Ona kam von einem anderen Ort."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 7,
+     "season": "year",
+     "type": "wounds",
+     "text": {
+      "en": "Ama treated a wound with hide and leaves, and the tribe began to care for its wounded.",
+      "es": "Ama curó una herida con piel y hojas, y la tribu empezó a cuidar a sus heridos.",
+      "pt": "Ama tratou uma ferida com pele e folhas, e a tribo começou a cuidar dos seus feridos.",
+      "fr": "Ama a soigné une blessure avec de la peau et des feuilles, et la tribu a commencé à soigner ses blessés.",
+      "de": "Ama versorgte eine Wunde mit Fell und Blättern, und der Stamm begann, seine Verletzten zu pflegen."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 7,
+     "season": "year",
+     "type": "explore",
+     "text": {
+      "en": "Iru found a muddy riverbank and a meadow full of animals.",
+      "es": "Iru encontró una orilla de barro y una pradera con muchos animales.",
+      "pt": "Iru encontrou uma margem de barro e uma pradaria com muitos animais.",
+      "fr": "Iru a trouvé une berge boueuse et une prairie pleine d'animaux.",
+      "de": "Iru fand ein schlammiges Ufer und eine Wiese voller Tiere."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 7,
+     "season": "year",
+     "type": "attack",
+     "text": {
+      "en": "Animals attacked Lumi and Iru.",
+      "es": "Animales atacaron a Lumi y a Iru.",
+      "pt": "Animais atacaram Lumi e Iru.",
+      "fr": "Des animaux ont attaqué Lumi et Iru.",
+      "de": "Tiere griffen Lumi und Iru an."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 8,
+     "season": "autumn",
+     "type": "birth",
+     "text": {
+      "en": "Mima was born, son of Neka and Toru.",
+      "es": "Nació Mima, hijo de Neka y Toru.",
+      "pt": "Nasceu Mima, filho de Neka e Toru.",
+      "fr": "Mima est né, fils de Neka et Toru.",
+      "de": "Mima wurde geboren, Sohn von Neka und Toru."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 8,
+     "season": "winter",
+     "type": "death",
+     "text": {
+      "en": "Ona died of an illness, aged 28.",
+      "es": "Murió Ona, de una enfermedad, a los 28 años.",
+      "pt": "Ona morreu de uma doença, aos 28 anos.",
+      "fr": "Ona est morte d'une maladie, à 28 ans.",
+      "de": "Ona starb mit 28 Jahren an einer Krankheit."
+     },
+     "source": "engine"
+    },
+    {
+     "year": 8,
+     "season": "year",
+     "type": "attack",
+     "text": {
+      "en": "An animal attacked Lumi.",
+      "es": "Un animal atacó a Lumi.",
+      "pt": "Um animal atacou Lumi.",
+      "fr": "Un animal a attaqué Lumi.",
+      "de": "Ein Tier griff Lumi an."
      },
      "source": "engine"
     }
